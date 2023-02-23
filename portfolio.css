@@ -1,0 +1,275 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.912);
+}
+
+#main {
+    display: block;
+}
+#head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo{
+    margin: 10px 20px;
+    color: rgb(8, 8, 8);
+}
+#menubtn:hover{
+    color: #c70039;
+}
+#closebtn:hover{
+    color: #c70039;
+}
+#img1{
+    height: 70px;
+    width: 70px;
+    display: none;
+}
+#text{
+    margin: 30px 20px;
+    color: rgb(224, 209, 209);
+    text-align: center;
+
+}
+#text h3{
+    font-size: 45px;
+}
+#menu{
+    margin: 10px 20px;
+    /* color: rgb(7, 7, 7); */
+    color: rgb(224, 209, 209);
+
+
+}
+#menu i{
+    font-size: 25px;
+}
+#menubtn:hover{
+    font-size: 30px;
+}
+#closebtn{
+    font-size: 25px;
+}
+#closebtn:hover{
+    font-size: 30px;
+}
+#listitem ul i{
+    font-size: 20px;
+}
+#listitem ul i:hover{
+    color: #c70039;
+}
+.change-color{
+    color:#c70039;
+    
+}
+
+#work{
+    display: flex;
+    justify-content: center;
+    padding: 50px 50px;
+   
+    /* position: relative; */
+}
+#img-sec{
+    width: 43%;
+    height: 80%;
+    /* margin-left: 215px; */
+
+    
+}
+.img{
+    height: 80%;
+    width: 500px;
+    float: right;
+    border-radius: 5px;
+}
+
+
+#work-con{
+    background-color: black;
+    color: white;
+    width: 500px;
+    padding: 30px;
+    /* margin-right: 215px; */
+    /* position: absolute;
+    top: 200;
+    left: 400; */
+    margin-top: 70px;
+    margin-left: -40px;
+    z-index: 3;
+    height: 330px;
+    border-radius: 5px;
+  
+}
+#work-con a
+{
+    text-decoration: none;
+    color: white;
+}
+
+#work-con  h2{
+    margin: 30px auto;
+}
+.btn{
+    margin-top: 40px;
+    padding: 10px 20px;
+}
+
+#opro{
+    /* padding: 30px; */
+justify-content: center;
+margin: 20px auto;
+}
+#opro h4{
+    text-align: center;
+    margin: 50px auto;
+    color: rgb(227, 211, 211);
+}
+.prolist{
+    background-color: black;
+    border-radius: 5px;
+    padding: 20px 60px;
+    margin: 10px 30px;
+    color: rgb(210, 190, 190);
+    text-align: center;
+}
+.prolist p{
+    margin: 0;
+}
+
+/* menu list style here  */
+#menulist{
+    color: rgb(218, 201, 201);
+    height: 100vh;
+    display: none;
+    width: 100vw;
+    background-color: rgb(29, 27, 27);
+    /* position: relative; */
+    
+}
+#menulist i{
+    margin: 10px;
+}
+#listitem{
+    height: 100vh;
+}
+#listitem a{
+    text-decoration: none;
+    color: white;
+}
+ #closebtn{
+    font-size: 20px;
+    float: right;
+    margin: 30px auto;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    color: rgb(203, 183, 183);
+    /* position: fixed; *
+    /* text-align: right; */
+}
+#menulist ul{
+padding: 0;
+text-align: center;
+cursor: pointer;
+
+}
+#menulist ul a:hover{
+    color: rgba(114, 102, 102, 0.915);
+}
+#menulist ul li{
+    /* margin: 30px 0; */
+    text-align: center;
+    text-transform: uppercase;
+    /* width: fit-content; */
+    display: block;
+    width: 100vw;
+    margin: 30px auto;
+    padding: 5px 10px;
+}
+
+/* media queries start here  */
+@media (max-width:1024px){
+  #work{
+    flex-direction: column;
+    justify-content: center;
+    margin: 60px auto;
+    padding: 0;
+    text-align: center;
+  }
+  #img-sec{
+    margin: 0;
+    display: block;
+    margin: 0px auto;
+    /* float: center; */
+    text-align: center;
+    width: 700px;
+    border-radius: 5px 5px 0 0;
+  }
+  .img{
+    display: block;
+    margin: 0px auto;
+    width: 700px;
+    border-radius: 5px 5px 0 0;
+
+  }
+  #work-con{
+    margin: 0px auto;
+    padding: 0  0 0 0;
+    width: 700px;
+    display: block;
+    border-radius: 0 0 5px 5px;
+    /* margin: 1px auto; */
+  }
+}
+
+@media (max-width:768px){
+    #img1{
+        display: none;
+    }
+    #img-sec{
+        width: 400px;
+    }
+    .img{
+        width:400px;
+    }
+    #work-con{
+        width: 400px;
+    }
+}
+
+@media (max-width:450px){
+    #img-sec{
+        width: 300px;
+    }
+    .img{
+        width:300px;
+    }
+    #work-con{
+        width: 300px;
+    }
+}
+
+@media (max-width:330px){
+    #img-sec{
+        width: 200px;
+    }
+    .img{
+        width:200px;
+    }
+    #work-con{
+        width: 200px;
+        height: fit-content;
+        padding-bottom: 20px;
+    }
+}

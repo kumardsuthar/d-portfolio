@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/a076d05399.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>dilipport....</title>
+</head>
+
+<body>
+    <header id="header">
+        <div id="head">
+            <div id="menu">
+                <div>
+                    <img src="img/user2.png" alt="logo" id="img1">
+                </div>
+                <div>
+                    <i class="fa fa-bars" id="menubtn"></i>
+                </div>
+            </div>
+
+            <div id="menu2">
+                <div id="social">
+                    <a href="https://wa.me/917297834350">
+                        <i class="fa fa-whatsapp vi"></i>
+                    </a>
+                    <a href="https://www.instagram.com/d_sthr02/">
+
+                        <i class="fa fa-instagram vi"></i>
+                    </a>
+                    <a href="https://t.me/+917297834350">
+
+                        <i class="fa fa-telegram vi"></i>
+                    </a>
+                    <a href="mailto:dilipkumarsuthar176@gmail.com">
+
+                        <i class="fa fa-envelope vi"></i>
+                    </a>
+                    <a href="tel:+91-7297834350">
+
+                        <i class="fa fa-phone icon"></i>
+                    </a>
+                    <a href="javascript:void(0)">
+
+                        <i class="fa fa-twitter icon"></i>
+                    </a>
+                </div>
+                <div id="ab">
+                    <h3> <span class="change-color"> Dilip </span> Suthar</h3>
+                    <h5>I'am <span class="txt-rotate change-color" data-period="500"
+                            data-rotate='[ "web developer", "UX designer", "Video Editor" ]' </span></h5>
+                </div>
+                <div id="con" class=" order-3 ">
+                    <a href="tel:+91-7297834350">
+                        <i class="fa fa-phone"></i></a>
+                    <a href="javascript:void(0)">
+                        <i class="fa fa-twitter"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div id="menulist">
+        <i class="fa fa-close" id="closebtn"></i>
+        <div id="listitem">
+            <ul>
+                <li><a href="index.html">home</a></li>
+                <li><a href="about.html">about</a></li>
+                <!-- <li><a href="service">service</a></li> -->
+                <li><a href="portfolio.html">portfolio</a></li>
+                <li><a href="contact.html">contact</a></li>
+                <a href="tel:+91-7297834350">
+                    <i class="fa fa-phone"></i></a>
+                    <a href="https://wa.me/917297834350">
+                        <i class="fa fa-whatsapp vi"></i>
+                    </a>
+                    <a href="https://www.instagram.com/d_sthr02/">
+
+                        <i class="fa fa-instagram vi"></i>
+                    </a>
+                    <a href="https://t.me/+917297834350">
+
+                        <i class="fa fa-telegram vi"></i>
+                    </a>
+
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        let menubtn = document.getElementById("menubtn");
+        let header = document.getElementById("header");
+        let menulist = document.getElementById("menulist");
+        let listitem = document.getElementById("listitem");
+        menubtn.addEventListener("click", function () {
+            header.style.cssText = "display:none";
+            listitem.style.cssText = "display:grid;place-items:center";
+            menulist.style.cssText = "display:block;";
+        });
+        let closebtn = document.getElementById("closebtn");
+        closebtn.addEventListener("click", function () {
+            header.style.cssText = "display:block";
+            menulist.style.cssText = "display:none;place-items:center;";
+        });
+    </script>
+
+    <script>
+        var TxtRotate = function (el, toRotate, period) {
+            this.toRotate = toRotate;
+            this.el = el;
+            this.loopNum = 0;
+            this.period = parseInt(period, 10) || 2000;
+            this.txt = '';
+            this.tick();
+            this.isDeleting = false;
+        };
+
+        TxtRotate.prototype.tick = function () {
+            var i = this.loopNum % this.toRotate.length;
+            var fullTxt = this.toRotate[i];
+
+            if (this.isDeleting) {
+                this.txt = fullTxt.substring(0, this.txt.length - 1);
+            } else {
+                this.txt = fullTxt.substring(0, this.txt.length + 1);
+            }
+
+            this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+            var that = this;
+            var delta = 300 - Math.random() * 100;
+
+            if (this.isDeleting) { delta /= 2; }
+
+            if (!this.isDeleting && this.txt === fullTxt) {
+                delta = this.period;
+                this.isDeleting = true;
+            } else if (this.isDeleting && this.txt === '') {
+                this.isDeleting = false;
+                this.loopNum++;
+                delta = 500;
+            }
+
+            setTimeout(function () {
+                that.tick();
+            }, delta);
+        };
+
+        window.onload = function () {
+            var elements = document.getElementsByClassName('txt-rotate');
+            for (var i = 0; i < elements.length; i++) {
+                var toRotate = elements[i].getAttribute('data-rotate');
+                var period = elements[i].getAttribute('data-period');
+                if (toRotate) {
+                    new TxtRotate(elements[i], JSON.parse(toRotate), period);
+                }
+            }
+            // INJECT CSS
+            var css = document.createElement("style");
+            css.type = "text/css";
+            css.innerHTML = ".txt-rotate > .wrap { border-right: 0.08em solid #666 }";
+            document.body.appendChild(css);
+        };
+    </script>
+</body>
+
+</html>

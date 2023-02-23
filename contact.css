@@ -1,0 +1,208 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+}
+body{
+    margin: 0;
+    padding: 0;
+    background-color: rgba(0, 0, 0, 0.912);
+}
+#mainrow{
+    margin: 0;
+}
+.change-color{
+    color:#c70039;
+    
+}
+
+#main {
+    display: block;
+    margin: 0;
+}
+#head{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+}
+
+#logo{
+    margin: 10px 20px;
+    color: rgb(8, 8, 8);
+}
+#menubtn:hover{
+    color: #c70039;
+}
+#closebtn:hover{
+    color: #c70039;
+}
+#img1{
+    height: 70px;
+    width: 70px;
+    display: none;
+}
+#text{
+    margin: 30px 20px;
+    color: rgb(224, 209, 209);
+    text-align: center;
+
+}
+#text h3{
+    font-size: 35px;
+}
+#menu{
+    margin: 10px 20px;
+    /* color: rgb(7, 7, 7); */
+    color: rgb(224, 209, 209);
+
+
+}
+#menu i{
+    font-size: 25px;
+}
+
+#textarea{
+    height: 200px;
+    width: 100%;
+    margin-top: 20px;
+    color: white;
+    padding: 5px 10px;
+}
+.inp{
+    background-color: black;
+    outline: none;
+    border: none;
+    padding: 15px;
+}
+.inp:focus{
+    background-color: rgba(0, 0, 0, 0.811);
+}
+.btn {
+    display: block;
+    margin: 30px auto;
+}
+
+#con-form{
+     background-image: url("img/conback.jpg");
+     background-size: cover;
+     background-repeat: no-repeat;
+     /* background-position: top; */
+    /* padding: 10px 70px; */ 
+    /* background-color: rgba(0, 0, 0, 0.811); */
+    /* background-image: linear-gradient(1,1,1,1); */
+    width: 500px;
+    display: block;
+    margin: 27px auto;
+    border-radius: 10px;
+    height: fit-content;
+    padding: 80px 20px;
+    justify-content: center;
+
+}
+#con-form h4{
+    margin: -40px auto 30px auto;
+    text-align: center;
+    color: white;
+}
+#condel{
+    margin-top: 30px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-left: 100px;
+}
+#condel i{
+    font-size: 30px;
+    margin: 0px 10px;
+    color: rgb(224, 209, 209);
+}
+#condel p{
+    margin: 0 10px;
+    text-transform:capitalize;
+    color: white;
+    
+}
+
+/* menu list */
+#menulist{
+    color: rgb(218, 201, 201);
+    height: 100vh;
+    display: none;
+    width: 100vw;
+    background-color: rgb(29, 27, 27);
+    /* position: relative; */
+    
+}
+#menulist i{
+    margin: 10px;
+}
+#listitem{
+    height: 100vh;
+}
+#listitem a{
+    text-decoration: none;
+    color: white;
+}
+#listitem ul i{
+    font-size: 20px;
+}
+#listitem ul i:hover{
+    color: #c70039;
+}
+ #closebtn{
+    font-size: 20px;
+    float: right;
+    margin: 30px auto;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    color: rgb(203, 183, 183);
+    /* position: fixed; *
+    /* text-align: right; */
+}
+#menulist ul{
+padding: 0;
+text-align: center;
+cursor: pointer;
+
+}
+#menulist ul a:hover{
+    color: rgba(114, 102, 102, 0.915);
+}
+#menulist ul li{
+    /* margin: 30px 0; */
+    text-align: center;
+    text-transform: uppercase;
+    /* width: fit-content; */
+    display: block;
+    width: 100vw;
+    margin: 30px auto;
+    padding: 5px 10px;
+}
+
+
+
+@media (max-width:768px){
+    #img1{
+        display: none;
+    }
+}
+
+
+@media (max-width:530px){
+    #msg{
+        margin: 0;
+        padding: 0;
+    }
+    #con-form{
+        width: 90%;
+        /* padding: 20px; */
+        /* margin: 0; */
+        display: block;
+        margin: 0px auto;
+    }
+    #condel{
+        margin-left: 30px;
+    }
+}

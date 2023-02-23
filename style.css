@@ -1,0 +1,307 @@
+*{
+    text-decoration: none;
+    list-style-type: none;
+
+}
+
+/* animation */
+#h1{
+    font-weight: 200;
+    margin: 0.4em 0;
+  }
+  h2{
+    font-weight: 200;
+    margin: 0.4em 0;
+  }
+  #h1 { font-size: 3.5em; }
+  h2 {
+    color: #888;
+    font-size: 2em;
+  }
+
+
+/* NOTE: I only tested this on Google Chrome.*/
+
+
+ 
+  
+/* animation end */
+body{
+    margin: 0;
+    padding: 0;
+}
+#head{
+    height: 100vh;
+    background-image: url('img/pexels-pixabay-90764.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+}
+#menu{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    margin: 0px 20px;
+}
+#menubtn:hover{
+    color: #c70039;
+}
+#closebtn:hover{
+    color: #c70039;
+}
+/* main color style  */
+.change-color{
+    /* color: rgb(204, 26, 26); */
+    color:#c70039;
+}
+#img1{
+    height: 60px;
+    width: 60px;
+    display: none;
+    margin: 10px 30px;
+}
+#menu i{
+    font-size: 20px;
+    color: white;
+    margin: 20px;
+
+}
+#menu2{
+     display: flex;
+     justify-content: space-between;
+     margin: 160px 20px;
+    
+     align-items: center;
+}
+#social{
+    display: block;
+    margin: 10px 30px;
+    grid-area: social;
+}
+#social .vi{
+    color: rgba(225, 213, 213, 0.84);
+    display: block;
+    margin: 30px 20px;
+    font-size: 30px;
+
+}
+#social a{
+    text-decoration: none;
+}
+#social .vi:hover{
+    color: #c70039;
+}
+.icon{
+    display: none;
+    font-size: 0;
+    color: rgba(225, 213, 213, 0.84);
+
+}
+.icon:hover{
+    color: #c70039;
+}
+#ab{
+    color: white;
+    grid-area: ab;
+    text-align: center;
+}
+#ab h3{
+    font-size: 65px;
+    font-weight: 700;
+    font-family: poppins;
+}
+#ab h5{
+    font-size: 30px;
+    font-weight: 500px;
+}
+/* #wapper{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+#wapper .static{
+    font-size: 45px;
+    font-weight: 400;
+    margin: 0;
+}
+#wapper .dynamic{
+    margin-left: 15px;
+    height: 90px;
+    line-height: 90px;
+    overflow: hidden;
+    margin-top: 17px;
+    padding: 0;
+}
+ .dynamic li{
+    list-style: none;
+    color: white;
+     font-size: 45px;
+     font-weight: 500;
+     position: relative;
+     /* background-color: black; */
+     /* top: 0;
+     animation: slide 6s steps(4) infinite;
+} */
+
+/* animation */
+/* @keyframes slide{ */
+    /* 100%{
+        top: -360px;
+    }
+}
+.dynamic li span{
+    position: relative;
+
+}
+.dynamic li span::after{
+    content: "";
+    position: absolute;
+    color: white;
+    height: 100%;
+    width: 100%;
+    border-left:2px solid black;
+    animation: type 1.5s steps(12) infinite;
+}
+
+/* animation */
+
+#con{
+    margin: 10px 30px;
+    grid-area: con;
+}
+#con i{
+    display: block;
+    margin: 30px 20px ;
+    font-size: 30px;
+    /* color: white; */
+    color: rgba(225, 213, 213, 0.84);
+
+}
+#con a
+{
+    text-decoration: none;
+}
+#con i:hover{
+    color: #c70039;
+}
+
+#menulist{
+    color: rgb(218, 201, 201);
+    height: 100vh;
+    display: none;
+    width: 100vw;
+    background-color: rgb(29, 27, 27);
+    /* position: relative; */
+    
+}
+#menulist i{
+    margin: 10px;
+    font-size: 20px;
+}
+#listitem{
+    height: 100vh;
+}
+#listitem a{
+    text-decoration: none;
+    color: white;
+}
+#listitem ul i{
+    font-size: 20px;
+}
+#listitem ul i:hover{
+    color: #c70039;
+}
+ #closebtn{
+    font-size: 20px;
+    float: right;
+    margin: 30px auto;
+    padding: 10px;
+    height: fit-content;
+    width: fit-content;
+    color: rgb(203, 183, 183);
+    /* position: fixed; *
+    /* text-align: right; */
+}
+#menulist ul{
+padding: 0;
+text-align: center;
+cursor: pointer;
+}
+
+#menulist ul a:hover{
+    color: rgba(114, 102, 102, 0.915);
+}
+#menulist ul li{
+    /* margin: 30px 0; */
+    text-align: center;
+    text-transform: uppercase;
+    /* width: fit-content; */
+    display: block;
+    width: 100vw;
+    margin: 30px auto;
+    padding: 5px 10px;
+}
+
+@media (max-width:768px){
+    #img1{
+        display: none;
+    }
+    #menu2{
+        flex-direction: column;
+        justify-content: center;
+    }
+    #menu2{
+        display: grid;
+        place-items: center;
+        grid-template:
+          'ab'
+          'social'
+          'con';
+        ;
+    }
+    #social i{
+        margin-top: 120px;
+    }
+    #social .vi{
+        display: inline-block;
+        /* margin-top: 120px; */
+        font-size: 20px;
+        margin: 120px 10px 10px 10px;
+    }
+    #social .icon{
+        display:inline-block;
+        font-size:20px ;
+        margin: 10px;
+        color: rgb(221, 206, 206);
+    }
+    #con i{
+        display: inline-block;
+    }
+    #con{
+        display: none;
+    }
+}
+
+@media (max-width:425){
+    #ab h3{
+        font-size: 30px;
+        font-weight: 400;
+    }
+}
+@media (max-width:350px){
+    #social{
+        margin: 100px auto 20px auto;
+    }
+    #social .vi{
+        margin: 5px;
+    }
+    #social .icon{
+        margin: 5px;
+        color: rgb(221, 206, 206);
+        display: none;
+
+        /* color: ; */
+    }
+}
