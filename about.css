@@ -123,6 +123,7 @@ body{
 }
 .ser:hover{
     background-color: #c70039;
+    pointer : cursor;
 }
 .ser:hover i{
     color: white;
